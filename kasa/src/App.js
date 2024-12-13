@@ -4,6 +4,7 @@ import FicheLogement from './pages/FicheLogement'
 import APropos from './pages/APropos'
 import NotFound from './pages/NotFound'
 import Layout from "./pages/Layout";
+import './style/App.css'
 
 function App() {
   return (
