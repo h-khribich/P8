@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../../assets/kasa-logo.svg"
+import style from "../header/header.module.css";
 
 const Header = () => {
   return (
     <header>
-      <h1>Kasa</h1>
+      <Link to="/" className={style.logo}>K<Logo />sa</Link>
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/fiche-logement">Fiche logement</Link>
+            <Link to="/">Accueil</Link>
           </li>
           <li>
             <Link to="/a-propos">A propos</Link>
