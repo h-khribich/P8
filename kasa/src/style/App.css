@@ -3,10 +3,71 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.kasaLogo {
-  color: #FF6060;
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
+
+.kasaLogo {
+  color: #FF6060;
+}
+
+.notFound-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-height: 618px;
+  margin: 5rem 0;
+}
+
+.notFound-title, .notFound-description {
+  color: #FF6060;
+}
+
+.notFound-title {
+  font-size: 200px;
+  margin: 0;
+}
+
+.notFound-description {
+  font-size: 36px;
+  margin: 0;
+}
+
+.notFound-link {
+  color: black;
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .notFound-section {
+    min-height: 0;
+    height: fit-content;
+    margin: 5rem 3rem;
+  }
+
+  .notFound-title {
+    font-size: 100px;
+  }
+
+  .notFound-description {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .notFound-link {
+    font-size: 14px;
+  }
+}
+
+
