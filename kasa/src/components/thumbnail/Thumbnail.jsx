@@ -1,10 +1,11 @@
 import style from "../thumbnail/thumbnail.module.css";
 import { Link } from "react-router-dom"
 
-const Thumbnail = () => {
+const Thumbnail = ({ property }) => {
   return (
     <div className={style.thumbnail}>
-      <Link className={style.link} to="/">Titre de la location</Link>
+      <img src={property.cover} className={style.thumbnailCover} />
+      <Link className={style.link} to="/">{property.title}</Link>
     </div>
   );
 };
