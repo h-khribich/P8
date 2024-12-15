@@ -7,6 +7,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 
 body {
@@ -14,6 +15,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+body > *:not(footer):not(.footer) {
+  margin: 0 5rem;
+}
+
 
 .kasaLogo {
   color: #FF6060;
@@ -50,6 +56,14 @@ body {
 }
 
 @media (max-width: 800px) {
+  body > *:not(footer):not(.footer), #root {
+    margin: 20px;
+  }
+
+  #root {
+    gap: 22px;
+  }
+
   .notFound-section {
     min-height: 0;
     height: fit-content;

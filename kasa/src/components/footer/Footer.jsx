@@ -4,7 +4,7 @@ import style from "../footer/footer.module.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id={style.footer}>
       <Link to="/" className={style.logo}>K<Logo />sa</Link>
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>

@@ -1,5 +1,9 @@
+import HeroBg from "../components/heroBg/HeroBg";
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <HeroBg />
+  );
 };
 
 export default Home;
