@@ -1,0 +1,20 @@
+.thumbnail {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  background-color: tomato;
+}
+
+.link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding-right: 45%;
+}
