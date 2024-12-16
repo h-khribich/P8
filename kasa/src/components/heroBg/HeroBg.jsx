@@ -1,9 +1,13 @@
 import style from "../heroBg/heroBg.module.css";
 
-const HeroBg = () => {
+const HeroBg = ({ text, img }) => {
+  const bgImgStyle = `
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${img}') center / cover no-repeat
+  `
+  
   return (
-    <div className={style.heroBgWrapper}>
-      <h1 className={style.heroBgDescription}>Chez vous, partout et ailleurs</h1>
+    <div className={style.heroBgWrapper} style={{background: bgImgStyle}}>
+      <h1 className={style.heroBgDescription}>{text}</h1>
     </div>
   );
 };

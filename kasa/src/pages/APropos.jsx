@@ -1,5 +1,10 @@
+import HeroBg from "../components/heroBg/HeroBg";
+import img from "../assets/apropos-bg.png"
+
 const APropos = () => {
-  return <h1>APropos</h1>;
+  return (
+    <HeroBg text="" img={img} />
+  );
 };
 
 export default APropos;
