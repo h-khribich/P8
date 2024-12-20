@@ -1,3 +1,43 @@
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideOutToTop {
+  0% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%); 
+  }
+}
+
+@keyframes rotateUpsideDown {
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);  
+  }
+}
+
+@keyframes rotateUp {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);  
+  }
+}
+
 .dropbtn {
   background-color: #FF6060;
   color: white;
@@ -10,11 +50,20 @@
   font-size: 18px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  height: 50x;
+  height: 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.dropIcon {
+  background: none;
+  cursor: pointer;
+  border: none;
+  margin-bottom: -3px;
+  margin-right: -10px;
 }
 
 .dropdown {
@@ -24,14 +73,20 @@
 
 .dropdownContent {
   display: none;
-  position: absolute;
-  background-color: red;
+  position: relative;
+  background-color: #F6F6F6;
   min-width: 160px;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 20px;
+  margin-top: -1px;
+}
+
+.dropdownContent ul { 
+  padding: 0; 
+  margin: 0;
 }
 
 .dropdownContent li {
@@ -40,8 +95,22 @@
   text-decoration: none;
   font-weight: 400;
   display: block;
-  padding-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
 }
 
-.open {display:block;} 
+.open { 
+  display:block; 
+  animation: slideInFromTop 0.3s ease-in-out forwards;
+} 
+
+.close {
+  animation: slideOutToTop 0.3s ease-in-out forwards;
+}
+
+.rotateBegin {
+  animation: rotateUpsideDown 0.4s ease-in-out forwards;
+}
+
+.rotateEnd {
+  animation: rotateUp 0.3s forwards;
+}

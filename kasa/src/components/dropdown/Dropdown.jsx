@@ -1,15 +1,36 @@
 import style from "../dropdown/dropdown.module.css";
+import icon from "../../assets/arrow-icon.png";
+import { useState } from "react";
 
 const Dropdown = ({ description, text }) => {
-  const open = () => document.getElementById("myDropdown").classList.toggle(style.open);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openOrClose = (e) => {
+    if (isOpen) {
+      e.target.parentElement.parentElement.nextElementSibling.classList.add(style.close);
+      setTimeout(() => {
+        setIsOpen(false); 
+      }, 300);
+    } else {
+      setIsOpen(true); 
+    }
+  };
 
   return (
     <div className={style.dropdown}>
-      <button onClick={open} className={style.dropbtn}>
+      <div className={style.dropbtn}>
         <span>{description}</span>
-        <span>icon</span>
-      </button>
-      <div id="myDropdown" className={style.dropdownContent}>
+        <button onClick={(e) => openOrClose(e)} className={style.dropIcon}>
+          <img
+            src={icon}
+            alt="Arrow Icon"
+            className={`${style.arrowIcon} ${isOpen ? style.rotateBegin : style.rotateEnd}`} 
+          />
+        </button>
+      </div>
+      <div
+        className={`${style.dropdownContent} ${isOpen ? style.open : style.close}`}
+      >
         <ul>
           <li>{text}</li>
         </ul>
