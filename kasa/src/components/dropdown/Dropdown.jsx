@@ -1,38 +1,51 @@
+import { useState } from "react";
 import style from "../dropdown/dropdown.module.css";
 import icon from "../../assets/arrow-icon.png";
-import { useState } from "react";
 
-const Dropdown = ({ description, text }) => {
+const Dropdown = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-  const openOrClose = (e) => {
+  const openOrClose = () => {
     if (isOpen) {
-      e.target.parentElement.parentElement.nextElementSibling.classList.add(style.close);
+      setIsClosing(true);
       setTimeout(() => {
         setIsOpen(false); 
-      }, 300);
+        setIsClosing(false); 
+      }, 400);
     } else {
-      setIsOpen(true); 
+      setIsOpen(true);
     }
   };
 
   return (
     <div className={style.dropdown}>
       <div className={style.dropbtn}>
-        <span>{description}</span>
-        <button onClick={(e) => openOrClose(e)} className={style.dropIcon}>
-          <img
+        <span>{title}</span>
+        <button onClick={openOrClose} className={style.dropIcon}>
+        <img
             src={icon}
             alt="Arrow Icon"
-            className={`${style.arrowIcon} ${isOpen ? style.rotateBegin : style.rotateEnd}`} 
+            className={`${style.arrowIcon} ${
+              isOpen && !isClosing ? style.rotateBegin : style.rotateEnd
+            }`}
           />
         </button>
       </div>
       <div
-        className={`${style.dropdownContent} ${isOpen ? style.open : style.close}`}
+        className={`${style.dropdownContent} ${
+          isOpen
+            ? isClosing
+              ? style.close
+              : style.open
+            : isClosing
+            ? style.close
+            : ""
+        }`}
+        style={{ display: isOpen || isClosing ? "block" : "none" }}
       >
         <ul>
-          <li>{text}</li>
+          <li>{content}</li>
         </ul>
       </div>
     </div>

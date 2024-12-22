@@ -55,6 +55,14 @@ body > *:not(footer):not(.footer) {
   margin: 0;
 }
 
+.a-proposSection {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 30px;
+  margin: 0 auto;
+}
+
 @media (max-width: 800px) {
   body > *:not(footer):not(.footer), #root {
     margin: 20px;
@@ -62,6 +70,7 @@ body > *:not(footer):not(.footer) {
 
   #root {
     gap: 22px;
+    height: fit-content;
   }
 
   .notFound-section {
@@ -81,6 +90,11 @@ body > *:not(footer):not(.footer) {
 
   .notFound-link {
     font-size: 14px;
+  }
+
+  .a-proposSection {
+    width: 100%;
+    gap: 20px;
   }
 }
 
