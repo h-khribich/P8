@@ -5,7 +5,7 @@ const Thumbnail = ({ property }) => {
   return (
     <div className={style.thumbnail}>
       <img src={property.cover} className={style.thumbnailCover} />
-      <Link className={style.link} to="/">{property.title}</Link>
+      <Link className={style.link} to={"/fiche-logement/" + property.id}>{property.title}</Link>
     </div>
   );
 };

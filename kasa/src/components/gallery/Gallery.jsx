@@ -1,16 +1,9 @@
-import { useEffect, useState } from "react";
 import style from "../gallery/gallery.module.css";
 import Thumbnail from "../thumbnail/Thumbnail"
+import { useProperties } from "../customHooks/propertiesProvider";
 
 const Gallery = () => {
-  const [properties, setProperties] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8080/api/properties")
-      .then((res) => res.json())
-      .then((data) => setProperties(data))
-      .catch((err) => console.log(err));
-  }, [])
+  const properties = useProperties();
 
   return (
     <section className={style.gallery}>
