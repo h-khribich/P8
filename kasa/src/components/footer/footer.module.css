@@ -38,8 +38,7 @@ footer p {
 }
 
 #footer {
-  margin: 0 -5rem !important;
-  overflow: hidden;
+  max-width: 100%;
 }
 
 @media (max-width: 800px) {

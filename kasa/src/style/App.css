@@ -4,10 +4,10 @@
 }
 
 #root {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  margin: 0;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
   flex-direction: column;
 }
 
-body > *:not(footer):not(.footer) {
+#root > *:not(footer):not(.footer) {
   margin: 0 5rem;
 }
 
@@ -58,19 +58,26 @@ body > *:not(footer):not(.footer) {
 .a-proposSection {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 70%;
   gap: 30px;
-  margin: 0 auto;
+  margin: 0 auto!important;
 }
 
 @media (max-width: 800px) {
-  body > *:not(footer):not(.footer), #root {
+  body > *:not(footer):not(.footer) {
     margin: 20px;
   }
 
   #root {
     gap: 22px;
-    height: fit-content;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #root > *:not(footer):not(.footer) {
+    margin-left: 20px;
+    margin-right: 20px;;
   }
 
   .notFound-section {
@@ -93,7 +100,9 @@ body > *:not(footer):not(.footer) {
   }
 
   .a-proposSection {
-    width: 100%;
+    width: auto!important;
+    margin-left: 20px!important;
+    margin-right: 20px!important;
     gap: 20px;
   }
 }
