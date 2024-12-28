@@ -40,9 +40,7 @@
     border-radius: 10px;
   }
 
-  .carousselNavigationArrows {
-    top: 45%;
-  }
+  .carousselNavigationArrows { top: 45%; }
 
   .carousselNavigationArrows img {
     cursor: pointer;
