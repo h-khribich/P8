@@ -1,0 +1,56 @@
+.caroussel {
+  display: flex;
+  height: 415px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.carousselBackgroundImg {
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousselNavigationArrows {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 40%;
+}
+
+.carousselNavigationArrows img {
+  cursor: pointer;
+}
+
+.carousselPagination {
+  position: absolute;
+  bottom: 5%;
+  margin: 0 auto;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  .caroussel {
+    height: 255px;
+    border-radius: 10px;
+  }
+
+  .carousselNavigationArrows {
+    top: 45%;
+  }
+
+  .carousselNavigationArrows img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+
+  .carousselPagination {
+    display: none;
+  }
+}

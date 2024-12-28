@@ -1,5 +1,6 @@
 import { Navigate, useParams } from "react-router-dom";
 import { useProperties } from "../components/customHooks/propertiesProvider";
+import Caroussel from "../components/caroussel/Caroussel";
 
 const FicheLogement = () => {
   const properties = useProperties();
@@ -10,17 +11,17 @@ const FicheLogement = () => {
   }
   
   const property = properties.find((p) => p.id === id);
+  console.log(property);
+  
 
   if(!property) {
     return <Navigate to="/not-found" replace />;
   }
 
   return (
-    <div>
-      <h1>{property.title}</h1>
-      <img src={property.cover} alt={property.title} />
-      <p>{property.description}</p>
-    </div>
+    <section className="section-ficheLogement">
+      <Caroussel pictures={property.pictures} />
+    </section>
   );
 };
 
