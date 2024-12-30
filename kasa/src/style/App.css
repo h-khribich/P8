@@ -64,6 +64,10 @@ body {
 }
 
 @media (max-width: 800px) {
+  html, body, #root {
+    height: 100vh;
+  }
+
   body > *:not(footer):not(.footer) {
     margin: 20px;
   }
@@ -104,6 +108,7 @@ body {
     margin-left: 20px!important;
     margin-right: 20px!important;
     gap: 20px;
+    flex: 1;
   }
 }
 
