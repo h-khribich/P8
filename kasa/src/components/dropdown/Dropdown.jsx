@@ -18,6 +18,12 @@ const Dropdown = ({ title, content }) => {
     }
   };
 
+  const displayList = (el) => {
+    return el instanceof Array
+    ? el.map((item) => <li key={item}>{item}</li>)
+    : <li>{el}</li>
+  }
+  
   return (
     <div className={style.dropdown}>
       <div className={style.dropbtn}>
@@ -44,9 +50,7 @@ const Dropdown = ({ title, content }) => {
         }`}
         style={{ display: isOpen || isClosing ? "block" : "none" }}
       >
-        <ul>
-          <li>{content}</li>
-        </ul>
+        <ul>{displayList(content)}</ul>
       </div>
     </div>
   );

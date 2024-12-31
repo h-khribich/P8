@@ -63,6 +63,91 @@ body {
   margin: 0 auto!important;
 }
 
+.property {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.property .title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #FF6060;
+  margin: 0;
+}
+
+.property .location {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.property .tagList {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.property .tag {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: #FF6060;
+  padding: .3rem 1.7rem;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.hostAndRating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.property .host {
+  display: flex;
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  gap: 1rem;
+  max-width: 180px;
+  text-align: right;
+  align-items: flex-start;
+  height: fit-content;
+}
+
+.host p {
+  margin: 0;
+  align-self: center;
+  line-height: 1.4;
+}
+
+.property .host img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.ratingList {
+  list-style-type: none;
+  display: flex;
+}
+
+.dropdowns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdowns > * {
+  width: 45%;
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
 @media (max-width: 800px) {
   html, body, #root {
     height: 100vh;
