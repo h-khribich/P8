@@ -37,7 +37,7 @@ const FicheLogement = () => {
     <section className="section-ficheLogement">
       <Caroussel pictures={property.pictures} />
       <div className="property">
-        <div>
+        <div className="locationWrapper">
           <h2 className="title">{property.title}</h2>
           <p className="location">{property.location}</p>
           <ul className="tagList">

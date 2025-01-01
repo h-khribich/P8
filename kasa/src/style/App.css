@@ -74,6 +74,7 @@ body {
   font-weight: 500;
   color: #FF6060;
   margin: 0;
+  line-height: 1.4;
 }
 
 .property .location {
@@ -139,6 +140,7 @@ body {
 .dropdowns {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .dropdowns > * {
@@ -194,6 +196,70 @@ body {
     margin-right: 20px!important;
     gap: 20px;
     flex: 1;
+  }
+
+  .property {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .property .title {
+    font-size: 18px;
+  }
+
+  .property .location {
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+  .property .tagList {
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+
+  .property .tag {
+    font-size: 10px;
+    padding: 0.2rem 1.3rem;
+    border-radius: 7px;
+  }
+
+  .hostAndRating {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ratingList {
+    padding: 0;
+    margin: 0;
+  }
+
+  .ratingList img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dropdowns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dropdowns > * {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .property .host {
+    font-size: 12px;
+    max-width: 120px;
+    align-items: center;
+  }
+
+  .property .host img {
+    width: 32px;
+    height: 32px;
   }
 }
 
