@@ -174,7 +174,7 @@ body {
   .notFound-section {
     min-height: 0;
     height: fit-content;
-    margin: 5rem 3rem;
+    margin: 5rem 3rem!important;
   }
 
   .notFound-title {

@@ -14,8 +14,6 @@ const FicheLogement = () => {
   }
   
   const property = properties.find((p) => p.id === id);
-  console.log(property);
-  
 
   if(!property) {
     return <Navigate to="/not-found" replace />;
