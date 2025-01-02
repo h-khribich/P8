@@ -15,11 +15,13 @@ const Caroussel = ({ pictures }) => {
   return (
     <div className={style.caroussel}>
       <img src={pictures[index]} className={style.carousselBackgroundImg} />
-      <div className={style.carousselNavigationArrows}>
+      {
+      pictures.length > 1 && <div className={style.carousselNavigationArrows}>
         <img src={arrowBack} id="arrowBack" onClick={(e) => carousselNavigation(e)} />
         <img src={arrowForward} id="arrowForward" onClick={(e) => carousselNavigation(e)} />
       </div>
-      <p className={style.carousselPagination}>{`${index + 1}/${pictures.length}`}</p>
+      }
+      {pictures.length > 1 && <p className={style.carousselPagination}>{`${index + 1}/${pictures.length}`}</p> }
     </div>
   );
 };
